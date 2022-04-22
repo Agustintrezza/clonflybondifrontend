@@ -2,7 +2,7 @@ Frontend de una aplicación hecha con Angular, que emula el sitio Flybondi.com .
 y una base de datos en MongoDB. 
 Através de la API se puede obtener, diferente información almacenada en la base de datos. La búsqueda se realiza y se filtra a través de un formulario.
 
-Tanto el front como el back se inicializan con "npm run start".
+Tanto el front como el back se inicializan con "npm start".
 
 El backend esta subido a Heroku y el frontend en Netlify.
 
