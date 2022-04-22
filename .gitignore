@@ -54,3 +54,5 @@ tsconfig.json
 tsconfig.spec.json
 tslint.json
 angular.json
+.browserslistrc
+.editorconfig
