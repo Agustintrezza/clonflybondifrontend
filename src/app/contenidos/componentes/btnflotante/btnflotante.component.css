@@ -1,0 +1,28 @@
+.boton-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 37px;
+    background: center;
+    border: none;
+}
+.btn-contenedor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #636680;
+    border-radius: 2.5rem;
+}
+.fa-comment-dots {
+    color:aliceblue;
+}
+.btn {
+    outline: none;
+}
+
+.btn-contenedor:hover {
+    transition: all ease-in-out .3s;
+    background-color: #9093b4 ;
+}

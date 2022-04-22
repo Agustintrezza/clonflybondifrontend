@@ -1,0 +1,238 @@
+<main class="container main">
+  <h1 class="text-center tituloprincipal">
+    ¡Calculá y Panificá del mejor modo tu vuelo!
+  </h1>
+  <h2 class="text-center titulosecundario">
+    ¡Completá tu búsqueda, en función de tu presupuesto y viajá a los mejores
+    lugares!
+  </h2>
+
+  <form
+    (ngSubmit)="guardar()"
+    autocomplete="off"
+    class="formulario px-4"
+    action="#"
+    [formGroup]="miFormulario"
+  >
+    <div class="campo row">
+      <label class="label">Tú presupuesto</label>
+
+      <input
+        type="number"
+        class="select"
+        name="select"
+        id=""
+        min="0"
+        formControlName="price"
+      />
+
+      <span class="form-text validador" *ngIf="!campoEsValido('price')">
+        * El presupuesto es obligatorio y debe ser mayor que 0
+      </span>
+    </div>
+
+    <div class="campo row">
+      <label class="label">Origen</label>
+      <select class="select" name="select" id="" formControlName="origin">
+        <option value="EPA">El Palomar</option>
+        <option value="MDZ">Mendoza</option>
+        <option value="BRC">Bariloche</option>
+        <option value="COR">Córdoba</option>
+      </select>
+
+      <span class="form-text validador" *ngIf="!campoEsValido('origin')">
+        * El origen es obligatorio
+      </span>
+    </div>
+
+    <div class="campo row">
+      <label class="label">Destino</label>
+      <select class="select" id="" formControlName="destination">
+        <option value="EPA">El Palomar</option>
+        <option value="MDZ">Mendoza</option>
+        <option value="BRC">Bariloche</option>
+        <option value="COR">Córdoba</option>
+      </select>
+
+      <span class="form-text validador" *ngIf="!campoEsValido('destination')">
+        * El destino es obligatorio
+      </span>
+    </div>
+
+    <div class="campo row">
+      <label class="label">Cantidad de Pasajeros</label>
+
+      <input
+        type="number"
+        class="select"
+        name="pasajeros"
+        id=""
+        min="0"
+        formControlName="pasajeros"
+      />
+      <!-- required -->
+
+      <span class="form-text validador" *ngIf="!campoEsValido('pasajeros')">
+        * La cantidad de pasajeros es obligatoria.
+      </span>
+    </div>
+
+    <div class="campo row">
+      <label class="label">Fecha deseada</label>
+      <input
+        type="date"
+        class="select"
+        name="data"
+        id=""
+        formControlName="data"
+      />
+
+      <span class="form-text validador" *ngIf="!campoEsValido('data')">
+        * La fecha es un campo obligatorio.
+      </span>
+    </div>
+
+    <div class="contenedorboton">
+      <button type="submit" class="boton">REALIZAR BÚSQUEDA</button>
+    </div>
+  </form>
+</main>
+
+<div class="resultados container">
+  <div class="contenedor-resultados">
+    <div *ngIf="vuelos && vuelos.length > 0 && busco">
+      <div class="vuelos" *ngFor="let vuelo of vuelos">
+        <div class="contenedor-vuelos">
+          <h1 class="alineacion">
+            <span class="item fecha">
+              {{ vuelo.data | date: "fullDate" | titlecase }}
+            </span>
+          </h1>
+
+          <div class="contenedor-disponibles">
+            <div class="flex">
+              <div class="destinos">
+                <h2 class="alineacion1">
+                  {{ obtenerDescripcionOrigen(vuelo.origin) }} -
+                </h2>
+                <h1 class="alineacion1">
+                  <span class="item1">{{ vuelo.origin }}</span>
+                </h1>
+              </div>
+
+              <div class="destinos">
+                <h2 class="alineacion1">
+                  {{ obtenerDescripcionOrigen(vuelo.destination) }}
+                </h2>
+                <h1 class="alineacion1">
+                  <span class="item1">{{ vuelo.destination }}</span>
+                </h1>
+              </div>
+            </div>
+
+            <h1 class="alineacion">
+              <span class="item disponibles"
+                ><i class="fa-solid fa-clock"></i>¡Últimos
+                {{ vuelo.availability }} disponibles!</span
+              >
+            </h1>
+          </div>
+
+          <div class="tarifa-club">
+            <h2 class="titulo-precio">Club FlyBondi</h2>
+            <h1 class="alineacion">
+              <span class="item precio-club">
+                $ {{ calcularPrecioConDescuento(vuelo.price) }}</span
+              >
+            </h1>
+          </div>
+          <!-- | number :'.2'       pipe para decimal -->
+          <div class="tarifa-club">
+            <h2 class="titulo-precio">Tarifa Base</h2>
+            <h1 class="alineacion">
+              <span class="item precio">$ {{ vuelo.price }}</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="busco && (vuelos && vuelos.length == 0) ">
+        <p>No se encontraron resultados para esta búsqueda</p>
+    </div>
+  </div>
+
+  <div *ngIf="vuelo" class="tu-busqueda">
+    <div class="titulo-busqueda">
+      <h1 class="titulo-fuente">Tú Búsqueda</h1>
+    </div>
+    <hr class="separador" />
+    <div class="contenido-destino">
+      <h2 class="destino-busqueda">
+        <i class="fa-solid fa-plane"></i
+        ><span> {{ obtenerDescripcionOrigen(origin) }} </span> a
+        <span>{{ obtenerDescripcionOrigen(destination) }}</span>
+      </h2>
+    </div>
+    <div class="contenido-busqueda">
+      <h2 class="destino-busqueda">
+        <i class="fa-solid fa-dollar-sign"></i
+        ><span class="precio-busqueda">{{
+          miFormulario.value.price | number: "1.2-2"
+        }}</span>
+      </h2>
+      <h2 class="destino-busqueda">
+        <i class="fa-solid fa-calendar"></i
+        ><span>
+          {{ miFormulario.value.data | date: "fullDate" | titlecase }}
+        </span>
+      </h2>
+      <h2 class="destino-busqueda">
+        <i class="fa-solid fa-user"></i
+        ><span> {{ miFormulario.value.pasajeros }} pasajeros</span>
+      </h2>
+    </div>
+    <hr class="separador" />
+    <div class="contenedor-consulta">
+      <h2 class="total">
+        Total: <span>$ {{ calcularPresupuestoTotal() }} </span>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="vuelo" class="tu-busqueda"> -->
+<!-- <div class="titulo-busqueda">
+            <h1>Tú Búsqueda</h1>
+        </div>
+        <div class="contenido-destino">
+            <h2><i class="fa-solid fa-plane"></i><span> {{miFormulario.value.origin}} </span> a <span>{{miFormulario.value.destination}}</span></h2>
+        </div>
+        <div class="contenido-busqueda">
+            <h2><i class="fa-solid fa-calendar"></i><span> {{miFormulario.value.data | date : 'fullDate' | titlecase  }} </span></h2>
+            <h2><i class="fa-solid fa-user"></i><span> 2 pasajeros</span></h2>
+            <h2><i class="fa-solid fa-dollar-sign"></i><span> {{miFormulario.value.price}}</span></h2>
+        </div> -->
+<!-- </div> -->
+
+<!-- <div class="contenedor-vuelos">
+                <h1 class="alineacion"><span class="item fecha"> Miercoles, 26 de Junio de 2022 </span></h1>
+                <h1 class="alineacion"><span class="item destino">Córdoba - Bariloche </span></h1>
+                <h1 class="alineacion"><span class="item disponibles">¡Últimos 3 disponibles!</span></h1> 
+                <h1 class="alineacion"><span class="item precio">$ 200</span></h1>
+            </div> -->
+
+<!-- <h1><span class="precio">$ {{vuelo.price}}</span></h1>
+    <h1><span class="precio">{{vuelo.data| date : 'fullDate' | titlecase}} </span></h1>
+    <h1><span class="precio">{{vuelo.origin}} - {{vuelo.destination}} </span></h1>
+    <h1><span class="precio">¡Últimos {{vuelo.availability}} disponibles!</span></h1>  -->
+
+<!-- 
+<h2>Precio Ida y Vuelta <span>${{vuelo.price}}</span></h2>
+<h2>Fecha <span>{{vuelo.data}}</span></h2>
+<h2>Origen <span>{{vuelo.origin}}</span></h2>
+<h2>Destino <span>{{vuelo.destination}}</span></h2>
+<h2>Pasajes Disponibles <span>{{vuelo.availability}}</span></h2> -->
+
+<!-- <h1><span class="precio">${{vuelo.price | currency : 'AR' }}</span></h1> -->
+
+<app-btnflotante></app-btnflotante>

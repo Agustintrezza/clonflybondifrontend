@@ -1,0 +1,157 @@
+.centrado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 2rem;
+}
+.navitem {
+    text-decoration: none;
+    cursor: pointer;
+    color: #2f3143;
+    font-size: 1rem;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+.navitem:hover {
+    transition: all ease-in-out .4s;
+    color: #a7a9b0;
+}
+.logo {
+    color: #3e3e3e;
+    font-weight: 400;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    height: 22px;
+    margin-top: -1px;
+}
+/* .logo:hover {
+    color: #ffd034;
+    transition: all ease-in-out .4s;
+} */
+.contenedorlogo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.fa-plane-departure {
+    /* color: #f9ba15; */
+    font-size: 26px;
+    color: #212529!important;
+}
+h1 {
+    margin-bottom: 0px;
+}
+.active {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffd034;
+    display: flex;
+    column-gap: 8px;
+}
+a {
+    text-decoration: none;
+}
+.contnavitem {
+    /* column-gap: 8px; */
+    display: flex;
+    align-items: center;
+}
+.contnavitem1 {
+    display: none;
+}
+.logoflybondiamarillo {
+    width: 188px;
+}
+.complementovisualheader {
+    background-color: #f4f4f4;
+}
+.complementonombre {
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    align-items: center;
+    height: 35px;
+    padding: 0 2rem;
+    column-gap: 9px;
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(244,244,244,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(244,244,244,1);
+box-shadow: 0px 0px 5px 0px rgba(244,244,244,1); */
+    /* visibility:hidden */
+}
+span {
+    font-weight: 400;
+}
+.complementolinearesponsive { 
+    display: none;
+}
+
+
+/*  RESPONSIVE */
+
+@media (max-width:468px) {
+    .centrado {
+        display: inherit;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 48px;
+        padding: 0 2rem;
+    }
+}
+@media (max-width:468px) {
+    .contnavitem {
+       display: none;
+    }
+}
+@media (max-width:468px) {
+    .contnavitem1 {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+        background-color: #dcdcdc;
+    }
+}
+@media (max-width:468px) {
+    .logo {
+        font-size: 16px;
+        margin-top: -10px;
+        height: 38px;
+}}
+@media (max-width:468px) {
+    .contenedorlogo {
+        align-items: center;
+}}
+
+@media (max-width:468px) {
+    .complementolinearesponsive { 
+        display: flex;
+        margin-top: 6px;
+    }
+}
+@media (max-width:468px) {
+    .logoflybondiamarillo {
+        width: 188px;
+        margin-left: 20px;
+        margin-top: -7px;
+    }
+}
+
+
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    transition: 0.4s linear;
+    top: 0px;
+    background-color: #fff;
+    z-index: 2;
+}
+.no-fixed {
+    position: static;
+    transition: 0.4s linear;
+    top: -50px;
+}

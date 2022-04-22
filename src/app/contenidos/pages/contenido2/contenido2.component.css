@@ -1,0 +1,53 @@
+ .imagencarousel {
+    width: 100%!important;
+    height: 25rem;
+}
+.botoncarousel {
+    color: red !important;
+    opacity: 1 !important;
+    width: 10% !important;
+}
+.contenedor {
+    width: 80%;
+    flex-wrap: 1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+    column-gap: 3rem;
+    margin-bottom: 3rem;
+}
+.logo {
+    width: 25%;
+}
+.titulos-logos{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.paquete-logos{
+    padding: 0rem;
+}
+a {
+    color: #fdbe15;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #5d5e5e;
+}
+.titulo-texto-contenedor {
+    margin-top: 1.1rem;
+}
+.pruebasss {
+    display: flex;
+    justify-content: center;
+}

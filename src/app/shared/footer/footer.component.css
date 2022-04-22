@@ -1,0 +1,170 @@
+.fa-solid, .fas {
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #393839!important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.fa-linkedin {
+    font-size: 37px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.fa-linkedin:hover {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fdbe15;
+}
+.fa-twitter-square {
+    font-size: 37px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.fa-twitter-square:hover {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fdbe15;
+}
+.fa-instagram-square {
+    font-size: 37px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.fa-instagram-square:hover {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fdbe15;
+}
+.fa-facebook-square {
+    font-size: 37px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.fa-facebook-square:hover {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fdbe15;
+}
+.fa-youtube-square {
+    font-size: 37px;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+.fa-youtube-square:hover {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fdbe15;
+}
+.contredes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+.fa-home {
+    margin-right: 5px;
+}
+.fa-envelope {
+    margin-right: 5px;
+}
+.fa-phone {
+    margin-right: 5px;
+}
+h5 {
+    color: #efeff2;
+    font-size: 14px;
+    font-weight: 400;
+    /* letter-spacing: 1px; */
+    font-family: 'Poppins', sans-serif;
+}
+p, a {
+    font-family: 'Poppins', sans-serif;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin: auto;
+    /* margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x)); */
+}
+.contenedornavfooter {
+    display: flex;
+    flex-direction: column;
+}
+.itemnavfooter {
+    text-decoration: none;
+    color: #efeff2;
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: 1px; */
+}
+.itemnavfooter:hover {
+    color: #fdbe15;
+    transition: all ease-in-out .3s;
+}
+.logoflybondyblanco {
+    width: 182px;
+    cursor: pointer;
+}
+.contenedorlogosfooter {
+    row-gap: 10px;
+}
+.contenedorlogoflybondifooter {
+    display: flex;
+    justify-content: end;
+}
+.somosflybondi {
+    font-weight: bold;
+    font-size: 20px;
+}
+.complementovisualfooter {
+    background-color: #f4f4f4;
+}
+.limpieza {
+    visibility: hidden;
+    margin-bottom: 0;
+}
+.separador {
+    color:#ffffff !important;
+    height: 2px;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width:468px) {
+    .responsive {
+        text-align: center;
+        margin-bottom: .5rem;
+}}
+@media (max-width:468px) {
+    .contenedorlogoflybondifooter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width:468px) {
+    .complementovisualfooter {
+        height: 32px;
+}}
+@media (max-width:468px) {
+    .somosflybondi {
+        margin-top: 1rem;
+}}
+@media (max-width:468px) {
+    h5, p {
+        text-align: center !important;
+}}
+@media (max-width:468px) {
+    .contenedorredes {
+        margin-bottom: 1rem;
+}}

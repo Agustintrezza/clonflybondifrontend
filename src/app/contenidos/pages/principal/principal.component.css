@@ -1,0 +1,312 @@
+.formulario {
+    width: 50%;
+    margin: auto;
+    margin-top: 59px;
+    /* background-color: #5050500f; */
+    border-radius: .6rem;
+    margin-bottom: 70px;
+}
+legend {
+    text-align: center;
+}
+.campo {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 30px; */
+    font-family: 'Poppins', sans-serif;
+}
+.select {
+    width: 65%;
+    height: 42px;
+    border-radius: 15px;
+    color: #605e5e;
+    padding: 8px;
+    outline: none;
+    border: 1px solid;
+}
+.label {
+font-size: 15px;
+width: 80px;
+color: #605e5e;
+}
+.tituloprincipal {
+    font-size: 33px;
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 9px;
+    margin-top: 2rem !important;
+}
+.titulosecundario {
+    font-size: 17px;
+    color: #605e5e;
+    font-family: 'Poppins', sans-serif;
+}
+.boton {
+    width: 93%;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #fdbe16;
+    border: none;
+    color: aliceblue;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-top: 11px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(253,190,22,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(253,190,22,1);
+box-shadow: 0px 0px 5px 0px rgba(253,190,22,1);
+    transition: all ease-in-out .3s;
+    font-family: 'Poppins', sans-serif;
+}
+.boton:hover {
+    background-color: #f0b922;
+    font-size: 13px;
+}
+.contenedorboton {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+main {
+    margin-top: 3rem;
+}
+.validador {
+    margin-top: 4px;
+    display: flex;
+    justify-content: end;
+    padding-right: 35px;
+    color: #ff657e;
+}
+.item {
+    display: flex;
+    color: #2f3143;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+.item1 {
+    display: flex;
+    color: #575757;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+.precio {
+    font-size: 30px;
+    width: 140px;
+    background-color: #f0b922;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    border-radius: 2.3rem;
+    border: 1px solid #5d5d5d;
+}
+.precio-club {
+    font-size: 30px;
+    width: 140px;
+    border: 1px solid #83439a;
+    color: #83439a;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    border-radius: 2.3rem
+}
+.fecha {
+    width: 165px;
+}
+.disponibles {
+    color: #ff4a67;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 7px;
+}
+.contenedor-disponibles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fa-alarm-clock {
+    font-size: 30px;
+}
+.fa-solid{
+    margin-right: 5px !important;  
+}
+.alineacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    min-width: 200px;
+}
+.alineacion1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    min-width: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.contenedor-vuelos {
+    display: flex;
+    border-left: 7px solid #f0b922;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    /* background-color: #f6f6df; */
+}
+.resultados {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+}
+.contenedor-resultados {
+    display: block;
+    grid-template-columns: 70% 30%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+.vuelos {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarifa-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 83px;
+}
+.titulo-precio {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+.titulo-busqueda {
+    background-color: #4f4c4d;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+.titulo-fuente {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 11px;
+    color:aliceblue;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    margin: 0 7px 0;
+}
+.tu-busqueda {
+    max-height: 280px;
+    width: 248px;
+}
+.separador {
+    margin: 0;
+    height: 3px;
+    color: #ffbf15 !important;
+    opacity: 1 !important;
+}
+.contenido-destino {
+    background-color: #f4f4f4;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+}
+.destino-busqueda {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contenido-busqueda {
+    padding: 10px;
+}
+.precio-busqueda {
+    font-weight: bold;
+}
+.total {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    height: 45px;
+    column-gap: 7px;
+    padding: 9px;
+}
+.contenedor-consulta {
+    background-color: #83439a;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+
+}
+.destinos {
+    /* margin-top: 1px; */
+    width: 91px;
+}
+/* RESPONSIVE  */
+
+@media (max-width:468px) {
+    .formulario {
+        width: 100%;
+        padding: 0 5px !important;
+        margin-top: 32px;
+        margin-bottom: 45px;
+    }
+}
+@media (max-width:468px) {
+    .label {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+@media (max-width:468px) {
+    .select {
+        width: 73%;
+    }
+}
+@media (max-width:468px) {
+    .campo {
+         column-gap: 18px; 
+    }
+}
+@media (max-width:468px) {
+    .tituloprincipal {
+         column-gap: 18px; 
+         font-size: 23px;
+         margin-top: 0!important;
+    }
+}
+@media (max-width:468px) {
+    .titulosecundario {
+         column-gap: 18px; 
+         font-size: 14px;
+         margin-bottom: 0!important;
+    }
+}
+@media (max-width:468px) {
+    main {
+        margin-top: 1.2rem!important;
+    }
+}
+
+
+
