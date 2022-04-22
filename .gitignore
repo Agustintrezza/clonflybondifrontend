@@ -46,3 +46,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+karma.conf.js
+tailwind.config.js
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+tslint.json
