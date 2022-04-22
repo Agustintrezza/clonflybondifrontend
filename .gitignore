@@ -56,3 +56,4 @@ tslint.json
 angular.json
 .browserslistrc
 .editorconfig
+e2e
